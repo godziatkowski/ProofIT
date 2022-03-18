@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "36de2876-bd9e-4ea8-bce2-068f2aa15d45",
+		"name": "ProofIt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test case 1. Result 2.28",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": \"8fc7cd5f-d6ab-4032-89c1-714b9ffbf703\",\r\n    \"status\": \"REGISTERED\",\r\n    \"objects\": [\r\n        {\r\n            \"name\": \"House\",\r\n            \"subObjects\": [\r\n                {\r\n                    \"name\": \"TV\",\r\n                    \"liabilityCost\": 8,\r\n                    \"risks\": [\r\n                        \"THEFT\"\r\n                    ]\r\n                },\r\n                {\r\n                    \"name\": \"RUG\",\r\n                    \"liabilityCost\": \"100\",\r\n                    \"risks\": [\r\n                        \"FIRE\"\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/policies/premium",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"policies",
+						"premium"
+					]
+				},
+				"description": "Theft values: [8]\r\nFire values: [100]\r\nexpected value: 2.28"
+			},
+			"response": []
+		},
+		{
+			"name": "Test case 2. Result 17.13",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": \"8fc7cd5f-d6ab-4032-89c1-714b9ffbf703\",\r\n    \"status\": \"REGISTERED\",\r\n    \"objects\": [\r\n        {\r\n            \"name\": \"House\",\r\n            \"subObjects\": [\r\n                {\r\n                    \"name\": \"TV\",\r\n                    \"liabilityCost\": 102.51,\r\n                    \"risks\": [\r\n                        \"THEFT\"\r\n                    ]\r\n                },\r\n                {\r\n                    \"name\": \"RUG\",\r\n                    \"liabilityCost\": \"500\",\r\n                    \"risks\": [\r\n                        \"FIRE\"\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/policies/premium",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"policies",
+						"premium"
+					]
+				},
+				"description": "Theft values: [8]\r\nFire values: [100]\r\nexpected value: 2.28"
+			},
+			"response": []
+		},
+		{
+			"name": "Test case 3. Result 7.94",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": \"8fc7cd5f-d6ab-4032-89c1-714b9ffbf703\",\r\n    \"status\": \"REGISTERED\",\r\n    \"objects\": [\r\n        {\r\n            \"name\": \"House\",\r\n            \"subObjects\": [\r\n                {\r\n                    \"name\": \"TV\",\r\n                    \"liabilityCost\": 50,\r\n                    \"risks\": [\r\n                        \"THEFT\"\r\n                    ]\r\n                },\r\n                {\r\n                    \"name\": \"RUG\",\r\n                    \"liabilityCost\": \"20\",\r\n                    \"risks\": [\r\n                        \"FIRE\", \"THEFT\"\r\n                    ]\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"name\": \"Garage\",\r\n            \"subObjects\": [\r\n                {\r\n                    \"name\": \"bike\",\r\n                    \"liabilityCost\": 45,\r\n                    \"risks\": [\r\n                        \"THEFT\"\r\n                    ]\r\n                },\r\n                {\r\n                    \"name\": \"gasoline\",\r\n                    \"liabilityCost\": \"10\",\r\n                    \"risks\": [\r\n                        \"FIRE\", \"THEFT\"\r\n                    ]\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"name\": \"Workshop\",\r\n            \"subObjects\": [\r\n                {\r\n                    \"name\": \"table circular saw\",\r\n                    \"liabilityCost\": 55,\r\n                    \"risks\": [\r\n                        \"FIRE\"\r\n                    ]\r\n                },\r\n                {\r\n                    \"name\": \"air compressor\",\r\n                    \"liabilityCost\": \"10\",\r\n                    \"risks\": [\r\n                        \"THEFT\"\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/policies/premium",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"policies",
+						"premium"
+					]
+				},
+				"description": "Theft values: [8]\r\nFire values: [100]\r\nexpected value: 2.28"
+			},
+			"response": []
+		},
+		{
+			"name": "Test case 3. Error for duplicated Objects",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": \"8fc7cd5f-d6ab-4032-89c1-714b9ffbf703\",\r\n    \"status\": \"REGISTERED\",\r\n    \"objects\": [\r\n        {\r\n            \"name\": \"House\",\r\n            \"subObjects\": [\r\n                {\r\n                    \"name\": \"TV\",\r\n                    \"liabilityCost\": 8,\r\n                    \"risks\": [\r\n                        \"THEFT\"\r\n                    ]\r\n                },\r\n                {\r\n                    \"name\": \"RUG\",\r\n                    \"liabilityCost\": \"100\",\r\n                    \"risks\": [\r\n                        \"FIRE\"\r\n                    ]\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"name\": \"House\",\r\n            \"subObjects\": [\r\n                {\r\n                    \"name\": \"TV1\",\r\n                    \"liabilityCost\": 8,\r\n                    \"risks\": [\r\n                        \"THEFT\"\r\n                    ]\r\n                },\r\n                {\r\n                    \"name\": \"RUG1\",\r\n                    \"liabilityCost\": \"100\",\r\n                    \"risks\": [\r\n                        \"FIRE\"\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/policies/premium",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"policies",
+						"premium"
+					]
+				},
+				"description": "Theft values: [8]\r\nFire values: [100]\r\nexpected value: 2.28"
+			},
+			"response": []
+		},
+		{
+			"name": "Test case 4. Error for duplicated SubObjects",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": \"8fc7cd5f-d6ab-4032-89c1-714b9ffbf703\",\r\n    \"status\": \"REGISTERED\",\r\n    \"objects\": [\r\n        {\r\n            \"name\": \"House\",\r\n            \"subObjects\": [\r\n                {\r\n                    \"name\": \"TV\",\r\n                    \"liabilityCost\": 8,\r\n                    \"risks\": [\r\n                        \"THEFT\"\r\n                    ]\r\n                },\r\n                {\r\n                    \"name\": \"RUG\",\r\n                    \"liabilityCost\": \"100\",\r\n                    \"risks\": [\r\n                        \"FIRE\"\r\n                    ]\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"name\": \"House1\",\r\n            \"subObjects\": [\r\n                {\r\n                    \"name\": \"TV\",\r\n                    \"liabilityCost\": 8,\r\n                    \"risks\": [\r\n                        \"THEFT\"\r\n                    ]\r\n                },\r\n                {\r\n                    \"name\": \"RUG1\",\r\n                    \"liabilityCost\": \"100\",\r\n                    \"risks\": [\r\n                        \"FIRE\"\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/policies/premium",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"policies",
+						"premium"
+					]
+				},
+				"description": "Theft values: [8]\r\nFire values: [100]\r\nexpected value: 2.28"
+			},
+			"response": []
+		}
+	]
+}
